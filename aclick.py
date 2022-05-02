@@ -19,4 +19,5 @@ async def click(url):
             pyautogui.click(tgX, tgY) #клик по кнопке в telegram
             print("SUCCESS")
     else:
-        print("NOT FOUND")
+        print("NOT FOUND URL")
+        print("-"*103)
