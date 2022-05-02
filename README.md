@@ -9,12 +9,33 @@
 
 Для подключения к Telegram API:
 ```
-api_id - int  
-api_hash - string
+api_id=int  
+api_hash=string
 ```
+Эти переменные добавляются в файл .env
 
-Для полечения этих данных:
+Для полечения этих данных api:
 
 1. Заходим на сайт https://my.telegram.org/apps
 2. Заполняем поля App title и Short name, нажимаем «Create application» и запоминаем две переменные: api_id и api_hash.
 
+
+Названия канала и тестовый (свой канал или ссылка на себя), которые будут парсится для поиска чека
+```
+INPUT_CHANNEL = 'namechannel'
+INPUT_TEST = 'nametest'
+```
+Пример названия канала или имя аккаунта: https://t.me/**namechannel**
+
+Последние важнные переменные
+
+Эти переменные нужны для определения положения (координат) кнопки в браузере "Разрешить/Открыть в приложение telegram" или что-то подобное и для определения положения кнопки кнопки "Начать/Start" в Telegram (она появляется у бота вместо "Поля ввода текста")
+
+Для Браузера `browserX, browserY = int, int`  
+Для Telegram `tgX, tgY = int, int`
+
+Они находятся в функции `async def click(...)` и определяются индивидуально для каждого экрана с помощью функции из библиотеки **pyautogui**
+```
+currentMouseX, currentMouseY = pyautogui.position()
+print(currentMouseX, currentMouseY)
+```
