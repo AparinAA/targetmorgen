@@ -10,14 +10,6 @@ import os
 #читаем env data из файла .env
 load_dotenv()
 
-#ВАЖНО!=========================================================
-#для определения положения кнопки в браузере "Разрешить/Открыть в приложение telegram" или что-то подобное
-#и для определения положения кнопки кнопки "Начать/Start"
-#для каждого экрана нужно определять самому
-            #currentMouseX, currentMouseY = pyautogui.position()
-            #print(currentMouseX, currentMouseY)
-#ВАЖНО!=========================================================
-
 #вспомогательная функция для клика
 #кликает когда поймали ссылку на чек
 async def click(url):
@@ -41,13 +33,9 @@ async def click(url):
 #ПОДКЛЮЧЕНИЕ К API TELEGRAM
 INPUT_CHANNEL = "alisherhateu" #name channel
 INPUT_TEST = 'alxaparin'
-bot_wallet = "wallet" #name wallet bot
 
 api_id = os.getenv("api_id")  #api id == int
 api_hash = os.getenv("api_hash") #api hash == string
-# Для полученние этих данных для api:
-# 1. Заходим на сайт https://my.telegram.org/apps
-# 2. Заполняем поля App title и Short name, нажимаем «Create application» и запоминаем две переменные: api_id и api_hash.
 
 #Получаем API telegram
 client = TelegramClient('session_name', api_id, api_hash)
