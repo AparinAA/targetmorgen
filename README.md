@@ -8,8 +8,10 @@
 **Основные переменные**
 
 Для подключения к Telegram API:
-```api_id - int  
-api_hash - string```
+```
+api_id - int  
+api_hash - string
+```
 
 Для полечения этих данных:
 
