@@ -39,7 +39,7 @@ client = TelegramClient('session_name', api_id, api_hash)
 #Обработчки новых сообщений в канале NAME CHANNELS
 @client.on(events.NewMessage(chats=NAME_CHANNELS))
 async def normal_handler(event):
-    print(event.message.date, "\t  | \t\t", name_id_dict[event.message.chat.id], end='\t\t|\t')
+    print(event.message.date, end="\t |\t")
     try:
         #Если поймал кнопку с ссылкой
         url = event.message.reply_markup.rows[0].buttons[0].url
@@ -51,8 +51,9 @@ async def normal_handler(event):
             url = check_url[0]
             await click(url)
         else:
-            print("NOT FOUND URL")
-            print("-"*103)
+            print("NOT FOUND URL", end='\t|\t\t')
+    print(name_id_dict[event.message.chat.id])
+    print("-"*103)
 
 def main():
     
@@ -68,7 +69,7 @@ def main():
     
     print('')
     print("="*103)
-    print('DATE NEW POST\t\t\t  | \t\t NAME CHANNEL\t\t|\t RESULT')
+    print('DATE NEW POST\t\t\t |\tRESULT\t\t|\t\tNAME CHANNEL')
     print("-"*103)
     #работаем до момента отключения
     client.run_until_disconnected()

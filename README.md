@@ -22,9 +22,9 @@ api_hash=string
 
 Названия канала и тестовый (свой канал или ссылка на себя), которые будут парсится для поиска чека
 ```
-INPUT_CHANNEL = 'namechannel'
-INPUT_TEST = 'nametest'
+INPUT_CHANNELS = ('namechannel_1','namechannel_2,'nametest')
 ```
+
 Пример названия канала или имя аккаунта из ссылки: t.me/**namechannel**
 
 Последние важнные переменные

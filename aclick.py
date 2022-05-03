@@ -17,7 +17,6 @@ async def click(url):
             #координаты кнопки в Telegram на которую будет нажимать скрипт
             tgX, tgY = 834,878
             pyautogui.click(tgX, tgY) #клик по кнопке в telegram
-            print("SUCCESS")
+            print("SUCCESS", end='\t\t|\t\t')
     else:
-        print("NOT FOUND URL")
-        print("-"*103)
+        print("NOT FOUND URL", end='\t|\t\t')
