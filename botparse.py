@@ -89,11 +89,6 @@ def main():
             print('NAME: {}, ID: {}'.format(name,msg.chat.id))
             name_id_dict[msg.chat.id] = name
     
-    name_id_dict['-1001535438409'] = 'KRIPTANAS'
-
-    for msg in client.get_messages(-1001535438409, limit=1):
-        print(msg)
-
     print('')
     print("="*103)
     print('DATE NEW POST\t\t\t |\tRESULT\t\t|\t\tNAME CHANNEL')
