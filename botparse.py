@@ -96,5 +96,6 @@ def main():
     #работаем до момента отключения
     client.run_until_disconnected()
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()

@@ -1,6 +1,6 @@
 # BotParse
 
-**Скрипт для отлавливания ссылки на чек от бота Wallet в Telegram.**  
+**Скрипт для мониторинга ссылок на чек от бота Wallet в Telegram.**  
 **Обработка этой ссылки и поочередное кликанье по ссылкам для активации приложения**
 
 ## Для запуска
@@ -22,7 +22,8 @@ api_hash=string
 
 Названия канала и тестовый (свой канал или ссылка на себя), которые будут парсится для поиска чека
 ```
-INPUT_CHANNELS = ('namechannel_1','namechannel_2,'nametest')
+NAME_CHANNELS = ('namechannel_1','namechannel_2,'nametest')
+ID_CHANNELS = (id_int_1, id_int_2, ...)
 ```
 
 Пример названия канала или имя аккаунта из ссылки: t.me/**namechannel**
@@ -31,6 +32,7 @@ INPUT_CHANNELS = ('namechannel_1','namechannel_2,'nametest')
 
 Эти переменные нужны для определения положения (координат) кнопки в браузере "*Разрешить/Открыть в приложение telegram*" или чего-то аналогичного и для определения положения кнопки "*Начать/Start*" в Telegram (она появляется у бота вместо "*Поля ввода текста*")
 
+*aclick.py*  
 Для Браузера `browserX, browserY = int, int`  
 Для Telegram `tgX, tgY = int, int`
 
@@ -39,3 +41,5 @@ INPUT_CHANNELS = ('namechannel_1','namechannel_2,'nametest')
 currentMouseX, currentMouseY = pyautogui.position()
 print(currentMouseX, currentMouseY)
 ```
+
+Запуск *python botparse.py*

@@ -20,3 +20,4 @@ async def click(url):
             print("SUCCESS", end='\t\t|\t\t')
     else:
         print("NOT FOUND URL", end='\t|\t\t')
+
