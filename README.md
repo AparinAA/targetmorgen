@@ -42,4 +42,4 @@ currentMouseX, currentMouseY = pyautogui.position()
 print(currentMouseX, currentMouseY)
 ```
 
-Запуск *python botparse.py*
+Запуск `python botparse.py`
