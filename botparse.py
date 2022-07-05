@@ -22,10 +22,8 @@ NAME_CHANNELS = (
     'durov', #Durov
     'slavamarlow', #Slava Marlow
     'givemetonru', #Дайте тон ньюс
-    #'alxaparin', #test account
 )
 ID_CHANNELS = (
-    258772623,
     -1001535438409
 )
 
